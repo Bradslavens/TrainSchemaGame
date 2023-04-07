@@ -104,7 +104,8 @@ private void OnTriggerEnter2D(Collider2D collision)
         }
         else
         {
-            answerButtonTexts[buttonIndex].text = "❌";
+            answerButtonTexts[buttonIndex].text = "X";
+
             PlayBuzzerSound();
         }
     }
