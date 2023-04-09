@@ -10,6 +10,12 @@ public class TrainCarController : MonoBehaviour
     public bool isMoving = true;
 
     private int currentWaypointIndex = 0;
+    private UIManager uiManager;
+
+    private void Start()
+    {
+        uiManager = FindObjectOfType<UIManager>();
+    }
 
     private void Update()
     {
@@ -24,6 +30,7 @@ public class TrainCarController : MonoBehaviour
         if (currentWaypointIndex >= waypoints.Count)
         {
             isMoving = false;
+            uiManager.ShowScoreBoard(); // Call ShowScoreBoard when the last waypoint is reached
             return;
         }
 

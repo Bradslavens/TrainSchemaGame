@@ -8,9 +8,21 @@ public class UIManager : MonoBehaviour
     public GameObject multipleChoiceUI;
     public Button[] answerButtons;
 
+    public GameObject scoreBoard;
+
+    private void Start()
+    {
+        if (scoreBoard != null)
+        {
+            scoreBoard.SetActive(false);
+        }
+    }
+
+
     private void Awake()
     {
         AssignUIElementsToAllSignals();
+
     }
 
     private void AssignUIElementsToAllSignals()
@@ -21,4 +33,13 @@ public class UIManager : MonoBehaviour
             trafficSignalController.AssignUIElements(multipleChoiceUI, answerButtons);
         }
     }
+
+    public void ShowScoreBoard()
+    {
+        if (scoreBoard != null)
+        {
+            scoreBoard.SetActive(true);
+        }
+    }
+
 }
