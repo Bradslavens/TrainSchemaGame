@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,15 +7,18 @@ public class UIManager : MonoBehaviour
 {
     public GameObject multipleChoiceUI;
     public Button[] answerButtons;
-    public TrafficSignalController trafficSignalPrefab;
 
-    private void Start()
+    private void Awake()
+    {
+        AssignUIElementsToAllSignals();
+    }
+
+    private void AssignUIElementsToAllSignals()
     {
         TrafficSignalController[] trafficSignalControllers = FindObjectsOfType<TrafficSignalController>();
-
-        foreach (TrafficSignalController controller in trafficSignalControllers)
+        foreach (TrafficSignalController trafficSignalController in trafficSignalControllers)
         {
-            controller.AssignUIElements(multipleChoiceUI, answerButtons);
+            trafficSignalController.AssignUIElements(multipleChoiceUI, answerButtons);
         }
     }
 }

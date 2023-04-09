@@ -15,7 +15,9 @@ public class TrafficSignalController : MonoBehaviour
     private List<GameObject> selectedSignals;
     private TMP_Text[] answerButtonTexts;
 
+   
     private GameObject multipleChoiceUI;
+
     private Button[] answerButtons;
 
 
@@ -24,7 +26,10 @@ public class TrafficSignalController : MonoBehaviour
         trainCarController = FindObjectOfType<TrainCarController>();
         audioSource = GetComponent<AudioSource>();
 
-        multipleChoiceUI.SetActive(false);
+        if (multipleChoiceUI != null)
+        {
+            multipleChoiceUI.SetActive(false);
+        }
 
         signals = new List<GameObject>(GameObject.FindGameObjectsWithTag("Signal"));
 
@@ -39,7 +44,9 @@ public class TrafficSignalController : MonoBehaviour
         }
     }
 
-private void OnTriggerEnter2D(Collider2D collision)
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("TrainCar"))
         {
