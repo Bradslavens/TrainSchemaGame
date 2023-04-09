@@ -1612,6 +1612,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: a
       objectReference: {fileID: 0}
+    - target: {fileID: 4997064016288330462, guid: 4056a446f901fac459315ad8454be60d, type: 3}
+      propertyPath: m_TagString
+      value: Signal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4056a446f901fac459315ad8454be60d, type: 3}
 --- !u!4 &2119826352 stripped
