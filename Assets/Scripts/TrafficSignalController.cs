@@ -20,6 +20,10 @@ public class TrafficSignalController : MonoBehaviour
 
     private Button[] answerButtons;
 
+    public static int totalQuestions = 0;
+    public static int correctAnswers = 0;
+
+
 
     private void Start()
     {
@@ -104,15 +108,17 @@ public class TrafficSignalController : MonoBehaviour
 
     private void CheckAnswer(int buttonIndex)
     {
+        totalQuestions++; // Increment the total questions
+
         if (selectedSignals[buttonIndex] == gameObject)
         {
+            correctAnswers++; // Increment the correct answers
             multipleChoiceUI.SetActive(false);
             trainCarController.ResumeTrainCar();
         }
         else
         {
             answerButtonTexts[buttonIndex].text = "X";
-
             PlayBuzzerSound();
         }
     }
@@ -136,6 +142,11 @@ public class TrafficSignalController : MonoBehaviour
         {
             answerButtonTexts[i] = answerButtons[i].GetComponentInChildren<TMP_Text>();
         }
+    }
+
+    public static float CalculateScore()
+    {
+        return (float)correctAnswers / totalQuestions;
     }
 
 }

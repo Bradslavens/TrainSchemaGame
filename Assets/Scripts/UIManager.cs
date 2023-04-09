@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class UIManager : MonoBehaviour
 {
@@ -9,6 +11,10 @@ public class UIManager : MonoBehaviour
     public Button[] answerButtons;
 
     public GameObject scoreBoard;
+
+    [SerializeField]
+    private TextMeshProUGUI scoreText;
+
 
     private void Start()
     {
@@ -38,6 +44,9 @@ public class UIManager : MonoBehaviour
     {
         if (scoreBoard != null)
         {
+            // Calculate and display the score
+            float score = TrafficSignalController.CalculateScore();
+            scoreText.text = string.Format("Score: {0:0}", score*100);
             scoreBoard.SetActive(true);
         }
     }

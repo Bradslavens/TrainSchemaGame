@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: e54aab2c84f907e428aeecefbe631ffb
+  - enabled: 1
+    path: Assets/Scenes/BlueLineSouthEastBound.unity
+    guid: 47a3473aeba66024e94005029aa0d29b
   m_configObjects: {}
