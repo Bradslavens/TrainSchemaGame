@@ -7,7 +7,7 @@ TagManager:
   - signal
   - TrainCar
   - Signal
-  - Crossing
+  - Obstacle
   layers:
   - Default
   - TransparentFX

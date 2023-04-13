@@ -24,26 +24,16 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        AssignUIElementsToAllSignals();
-        AssignUIElementsToAllCrossings(); // Add this line
-    }
-
-    private void AssignUIElementsToAllSignals()
-    {
-        TrafficSignalController[] trafficSignalControllers = FindObjectsOfType<TrafficSignalController>();
-        foreach (TrafficSignalController trafficSignalController in trafficSignalControllers)
-        {
-            trafficSignalController.AssignUIElements(multipleChoiceUI, answerButtons);
-        }
+        AssignUIElementsToAllObstacles();
     }
 
     // Add this new method
-    private void AssignUIElementsToAllCrossings()
+    private void AssignUIElementsToAllObstacles()
     {
-        CrossingController[] crossingControllers = FindObjectsOfType<CrossingController>();
-        foreach (CrossingController crossingController in crossingControllers)
+        ObstacleController[] obstacleControllers = FindObjectsOfType<ObstacleController>();
+        foreach (ObstacleController obstacleController in obstacleControllers)
         {
-            crossingController.AssignUIElements(multipleChoiceUI, answerButtons);
+            obstacleController.AssignUIElements(multipleChoiceUI, answerButtons);
         }
     }
 

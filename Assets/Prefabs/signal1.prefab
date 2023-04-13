@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2315284547019834287}
   - component: {fileID: 6907697373187939662}
-  - component: {fileID: -5060973145137423328}
   - component: {fileID: 6056614413983096932}
+  - component: {fileID: -8480213082395018134}
   m_Layer: 0
   m_Name: signal1
-  m_TagString: Signal
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,20 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-5060973145137423328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4997064016288330462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05e6e0d61a8b99e4981e73a554b40161, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buzzerSound: {fileID: 0}
-  numberOfOptions: 4
 --- !u!61 &6056614413983096932
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -126,3 +112,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.5095203, y: 0.7952318}
   m_EdgeRadius: 0
+--- !u!114 &-8480213082395018134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4997064016288330462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a34f7f8b25ad06469824c82d951e196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buzzerSound: {fileID: 0}
+  numberOfOptions: 4
