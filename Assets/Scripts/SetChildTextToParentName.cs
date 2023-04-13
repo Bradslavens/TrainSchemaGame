@@ -1,31 +1,40 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class SetChildTextToParentName : MonoBehaviour
 {
+    [SerializeField]
+    private List<string> sceneNames;
+
     private void Start()
     {
-        // Get the child object of the current GameObject
-        Transform childTransform = transform.GetChild(0);
-
-        if (childTransform != null)
+        // Check if the current scene's name is in the list of scene names
+        if (sceneNames.Contains(SceneManager.GetActiveScene().name))
         {
-            // Get the TextMeshPro component of the child GameObject
-            TextMeshPro textMeshPro = childTransform.GetComponent<TextMeshPro>();
+            // Get the child object of the current GameObject
+            Transform childTransform = transform.GetChild(0);
 
-            if (textMeshPro != null)
+            if (childTransform != null)
             {
-                // Set the text of the TextMeshPro component to the name of the current GameObject
-                textMeshPro.text = gameObject.name;
+                // Get the TextMeshPro component of the child GameObject
+                TextMeshPro textMeshPro = childTransform.GetComponent<TextMeshPro>();
+
+                if (textMeshPro != null)
+                {
+                    // Set the text of the TextMeshPro component to the name of the current GameObject
+                    textMeshPro.text = gameObject.name;
+                }
+                else
+                {
+                    Debug.LogWarning("TextMeshPro component not found on the child GameObject.");
+                }
             }
             else
             {
-                Debug.LogWarning("TextMeshPro component not found on the child GameObject.");
+                Debug.LogWarning("Child object not found.");
             }
-        }
-        else
-        {
-            Debug.LogWarning("Child object not found.");
         }
     }
 }
