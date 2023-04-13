@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
 public class UIManager : MonoBehaviour
 {
     public GameObject multipleChoiceUI;
@@ -15,7 +14,6 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI scoreText;
 
-
     private void Start()
     {
         if (scoreBoard != null)
@@ -24,11 +22,10 @@ public class UIManager : MonoBehaviour
         }
     }
 
-
     private void Awake()
     {
         AssignUIElementsToAllSignals();
-
+        AssignUIElementsToAllCrossings(); // Add this line
     }
 
     private void AssignUIElementsToAllSignals()
@@ -40,15 +37,24 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    // Add this new method
+    private void AssignUIElementsToAllCrossings()
+    {
+        CrossingController[] crossingControllers = FindObjectsOfType<CrossingController>();
+        foreach (CrossingController crossingController in crossingControllers)
+        {
+            crossingController.AssignUIElements(multipleChoiceUI, answerButtons);
+        }
+    }
+
     public void ShowScoreBoard()
     {
         if (scoreBoard != null)
         {
             // Calculate and display the score
             float score = TrafficSignalController.CalculateScore();
-            scoreText.text = string.Format("Score: {0:0}", score*100);
+            scoreText.text = string.Format("Score: {0:0}", score * 100);
             scoreBoard.SetActive(true);
         }
     }
-
 }
