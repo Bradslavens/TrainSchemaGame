@@ -32,7 +32,17 @@ public class ObstacleController : MonoBehaviour
             multipleChoiceUI.SetActive(false);
         }
 
-        obstacles = new List<GameObject>(GameObject.FindGameObjectsWithTag("Obstacle"));
+        GameObject[] allObstacles = GameObject.FindGameObjectsWithTag("Obstacle");
+        obstacles = new List<GameObject>();
+
+        foreach (GameObject obstacle in allObstacles)
+        {
+            BoxCollider2D collider = obstacle.GetComponent<BoxCollider2D>();
+            if (collider != null && collider.enabled)
+            {
+                obstacles.Add(obstacle);
+            }
+        }
 
         // Remove the current obstacle from the list of possible obstacles
         obstacles.Remove(gameObject);

@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 569730280338648386}
   - component: {fileID: -1736170130553674092}
   - component: {fileID: 6622978286048196348}
+  - component: {fileID: -5640963973808699907}
   m_Layer: 0
   m_Name: StationL
   m_TagString: Obstacle
@@ -299,3 +300,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.4, y: 9.6}
   m_EdgeRadius: 0
+--- !u!114 &-5640963973808699907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7476309345354761135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a34f7f8b25ad06469824c82d951e196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buzzerSound: {fileID: 0}
+  numberOfOptions: 4

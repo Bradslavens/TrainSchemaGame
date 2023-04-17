@@ -1630,7 +1630,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 490387750}
-  - component: {fileID: 490387751}
   m_Layer: 0
   m_Name: Crossings
   m_TagString: Untagged
@@ -1685,18 +1684,6 @@ Transform:
   m_Father: {fileID: 1590695958}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &490387751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490387749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edd2de818af96fb498978dd4cbcff124, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &580517086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5570,7 +5557,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1460618543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 652bf72e52d0edb4caad185d1318442e, type: 3}
+  m_Script: {fileID: 11500000, guid: edd2de818af96fb498978dd4cbcff124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1467600697
@@ -6571,6 +6558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1747608283}
+  - component: {fileID: 1747608284}
   m_Layer: 0
   m_Name: Stations
   m_TagString: Untagged
@@ -6605,6 +6593,18 @@ Transform:
   m_Father: {fileID: 1590695958}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1747608284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747608282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd2de818af96fb498978dd4cbcff124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1762538596
 PrefabInstance:
   m_ObjectHideFlags: 0
