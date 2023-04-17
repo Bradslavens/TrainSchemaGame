@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.39, y: 0.48}
-  m_SizeDelta: {x: 20, y: 5}
+  m_AnchoredPosition: {x: 4.1746, y: 1.8647}
+  m_SizeDelta: {x: 19.5692, y: 2.2307}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &5848153905931691274
 MeshRenderer:
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 9.577604, y: 1.2664604, z: -2.6597252, w: 1.4247675}
+  m_margin: {x: 0.28498554, y: 0.22027206, z: 0.17113686, w: 0.07087493}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -267,7 +267,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9162372846316450904}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01670b1b3a8ae394eaeb0632e079c502, type: 3}
   m_Name: 
